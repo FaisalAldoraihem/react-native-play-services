@@ -27,6 +27,7 @@ public class GoogleAPIProvider extends BaseProvider {
     }
 
     public GooglePlayServicesStatus getGooglePlayServicesStatus() {
+        this.initializeGMSStatus();
         if (!isGmsEnabled) {
             return GooglePlayServicesStatus.GMS_DISABLED;
         }
